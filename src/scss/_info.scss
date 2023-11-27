@@ -1,0 +1,96 @@
+.info {
+  padding: 100px 70px;
+  @include breakpoint(1024px) {
+    padding: 60px 50px;
+  }
+  @include breakpoint(768px) {
+    padding: 60px 24px;
+  }
+  @include breakpoint(425px) {
+    padding: 60px 0;
+  }
+  &_content {
+    padding: 100px 110px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.08);
+    background: $white;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-bottom: 100px;
+    transition: all 0.3s ease-in-out;
+    @include breakpoint(1024px) {
+      margin-bottom: 50px;
+      padding: 50px 60px;
+    }
+    @include breakpoint(768px) {
+      padding: 24px;
+    }
+    @include breakpoint(425px) {
+      padding: 24px 5px;
+    }
+    &-text {
+      color: $main;
+      font-size: 32px;
+      line-height: 120%;
+      text-align: center;
+      span {
+        color: $btn-red;
+      }
+      @include breakpoint(1024px) {
+        font-size: 24px;
+      }
+      @include breakpoint(768px) {
+        font-size: 16px;
+      }
+    }
+  }
+  &_number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 185px;
+    row-gap: 80px;
+    transition: all 0.3s ease-in-out;
+    @include breakpoint(1250px) {
+      column-gap: 130px;
+    }
+    @include breakpoint(992px) {
+      column-gap: 10%;
+      row-gap: 40px;
+    }
+    @include breakpoint(575px) {
+      column-gap: 5%;
+      row-gap: 24px;
+    }
+
+    &-item {
+      &_title {
+        opacity: 0.95;
+        color: $red;
+        font-size: 80px;
+        line-height: 80%;
+        margin-bottom: 4px;
+        @include breakpoint(992px) {
+          font-size: 60px;
+        }
+        @include breakpoint(575px) {
+          font-size: 40px;
+          text-align: center;
+        }
+      }
+      &_text {
+        color: $main;
+        line-height: 150%;
+        font-weight: 400;
+        @include breakpoint(575px) {
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

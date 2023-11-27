@@ -1,0 +1,81 @@
+.slider {
+  padding: 100px 70px 70px;
+  @include breakpoint(991px) {
+    padding: 50px 32px;
+  }
+  @include breakpoint(575px) {
+    padding: 50px 5px;
+  }
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 55px;
+    @include breakpoint(991px) {
+      margin-bottom: 32px;
+    }
+    @include breakpoint(575px) {
+      margin-bottom: 15px;
+    }
+    &-title {
+      flex-shrink: 0;
+      color: $main;
+      font-size: 56px;
+      line-height: 100%;
+      @include breakpoint(991px) {
+        font-size: 42px;
+      }
+      @include breakpoint(575px) {
+        font-size: 28px;
+      }
+    }
+    &-actions {
+      display: flex;
+      gap: 20px;
+      @include breakpoint(991px) {
+        gap: 10px;
+      }
+      @include breakpoint(575px) {
+        display: none;
+      }
+      button {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @include breakpoint(991px) {
+          svg {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+  &_image {
+    width: 100%;
+  }
+  &_footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+    @include breakpoint(575px) {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      height: 6px;
+      opacity: 0.1;
+      background: $black;
+      flex-grow: 1;
+      border-radius: 0;
+      &-active {
+        background: $red;
+        opacity: 1;
+      }
+    }
+  }
+}
